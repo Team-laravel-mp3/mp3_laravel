@@ -10,14 +10,22 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/','HomeController@test');
+// Route::get('/', 'LiveSearchController@index');
+
 
 Route::get('/home','HomeController@home')->name('home');
+
+Route::get('/search', 'HomeController@getsearch')->name('search');
+Route::post('/search','HomeController@postsearch')->name('postsearch');
+
 Route::get('/playmusic','HomeController@playmusic');
 
 Route::group(['prefix' => 'login','middleware'=>'checklogout'], function () {
     Route::get('/','LogInController@getLogin')->name('UserLogin');
     Route::post('/','LogInController@postLogin');
+
+    // Route::get('facebook', 'LogInController@redirectToProvider') ;
+    // Route::get('facebook/callback', 'LogInController@handleProviderCallback');
 
     Route::group(['prefix' => 'register'], function () {
         Route::get('/','LogInController@getregister')->name('UserRegister');
@@ -30,8 +38,6 @@ Route::group(['prefix' => 'login','middleware'=>'checklogout'], function () {
     Route::get('/reset-password','LogInController@resetPassword')->name('reset.link');
     Route::post('/reset-password','LogInController@postResetPassword')->name('reset.link');
 
-    Route::get('facebook/callback','LogInController@callback')->name('User.Login.facebook');
-    Route::post('facebook','LogInController@callback');
 });
 
 Route::group(['prefix'=>'user','middleware'=>'checklogin'],function(){
@@ -66,7 +72,7 @@ Route::group(['prefix'=>'user','middleware'=>'checklogin'],function(){
 
 });
 
-Route::group(['prefix'=>'admin'],function(){
+Route::group(['prefix'=>'admin', 'middleware'=>'CheckLoginAdmin'],function(){
     Route::group(['prefix'=>'user'],function(){
         Route::get('/','AdminController@user')->name('userlist');
 

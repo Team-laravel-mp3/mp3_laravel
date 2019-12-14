@@ -164,6 +164,7 @@ return [
         Illuminate\View\ViewServiceProvider::class,
         Weidner\Goutte\GoutteServiceProvider::class,
         Collective\Html\HtmlServiceProvider::class,
+        Laravel\Socialite\SocialiteServiceProvider::class,
         /*
          * Package Service Providers...
          */
@@ -231,6 +232,7 @@ return [
         'Goutte' => Weidner\Goutte\GoutteFacade::class,
         'Form' => Collective\Html\FormFacade::class,
         'Html' => Collective\Html\HtmlFacade::class,
+        'Socialite' => Laravel\Socialite\Facades\Socialite::class,
     ],
 
 ];

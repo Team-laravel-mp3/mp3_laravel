@@ -1,76 +1,132 @@
+<!-- Footer -->
+<footer class="page-footer font-small blue-grey lighten-5">
 
-<section id="footer">
+  <div style="background-color: #21d192;">
     <div class="container">
-        <div class="row text-center text-xs-center text-sm-left text-md-left">
-            <div class="col-xs-12 col-sm-4 col-md-3">
-                <h5>Kurumsal</h5>
-                <ul class="list-unstyled quick-links">
-                    <li><a href="https://www.viccoshop.com.tr/vicco-hakkimizda"><i class="fa fa-angle-double-right"></i>Hakkımızda</a></li>
-                    <li><a href="https://www.viccoshop.com.tr/magazalarimiz"><i class="fa fa-angle-double-right"></i>Mağazalarımız</a></li>
-                    <li><a href="https://www.viccoshop.com.tr/musteri-hizmetleri"><i class="fa fa-angle-double-right"></i>Üyelik Koşulları</a></li>
-                    <li><a href="https://www.viccoshop.com.tr/guvenlik-sozlesmesi"><i class="fa fa-angle-double-right"></i>Güvenlik Sözleşmesi</a></li>
-                    <li><a href="https://www.viccoshop.com.tr/iletisim.aspx"><i class="fa fa-angle-double-right"></i>İletişim</a></li>
-                </ul>
-            </div>
-            <div class="col-xs-12 col-sm-4 col-md-3">
-                <h5>Müşteri Hizmetleri</h5>
-                <ul class="list-unstyled quick-links">
-                    <li><a href="https://www.viccoshop.com.tr/sss"><i class="fa fa-angle-double-right"></i>Sıkça Sorulan Sorular</a></li>
-                    <li><a href="https://www.viccoshop.com.tr/siparis-ve-iade-degisim"><i class="fa fa-angle-double-right"></i>İade ve Değişim</a></li>
-                    <li><a href="https://www.viccoshop.com.tr/kargo-ve-teslimat"><i class="fa fa-angle-double-right"></i>Kargo ve Teslimat</a></li>
-                    <li><a href="https://www.viccoshop.com.tr/banka-hesaplarimiz"><i class="fa fa-angle-double-right"></i>Banka Hesaplarımız</a></li>
-                    <li><a href="https://www.viccoshop.com.tr/siparistakip.aspx"><i class="fa fa-angle-double-right"></i>Sipariş Takibi</a></li>
-                </ul>
-            </div>
-            <div class="col-xs-12 col-sm-4 col-md-6">
-                <h4>Phản hồi về chúng tôi ?</h4>
-                <form id="contact-form" name="contact-form" action="mail.php" method="POST">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="md-form mb-0">
-                                <label for="name" class="">Tên </label>
-                                <input type="text" id="name" name="name" class="form-control">
 
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="md-form mb-0">
-                                <label for="email" class="">email</label>
-                                <input type="text" id="email" name="email" class="form-control">
+      <!-- Grid row-->
+      <div class="row py-4 d-flex align-items-center">
 
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="md-form">
-                                <label for="">Vấn đề</label>
-                                <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea"></textarea>
-                            </div>
-                        </div>
-                    </div>
-                </form>
-                <div class="text-center text-md-left">
-                    <a class="btn btn-primary" onclick="document.getElementById('contact-form').submit();">Gửi</a>
-                </div>
-                <div class="status"></div>
-            </div>
+        <!-- Grid column -->
+        <div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
+          <h6 class="mb-0">liên hệ đến chúng tôi</h6>
         </div>
-        <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-5">
-                <ul class="list-unstyled list-inline social text-center">
-                    <li class="list-inline-item"><a href="https://twitter.com/Vicco" target="_blank"><i class="fab fa-facebook-messenger"></i></a></li>
-                    <li class="list-inline-item"><a href="https://instagram.com/Vicco" target="_blank"><i class="fas fa-phone-square"></i></a></li>
-                    <li class="list-inline-item"><a href="https://www.youtube.com/user/ViccoFamily" target="_blank"><i class="fab fa-facebook-square"></i></a></li>
-                    <li class="list-inline-item"><a href="mailto:info@viccoshop.com.tr" target="_blank"><i class="fa fa-envelope"></i></a></li>
-                </ul>
-            </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-6 col-lg-7 text-center text-md-right">
+
+          <!-- Facebook -->
+          <a class="fb-ic">
+            <i class="fab fa-facebook-f white-text mr-4"> </i>
+          </a>
+          <!-- Twitter -->
+          <a class="tw-ic">
+            <i class="fab fa-twitter white-text mr-4"> </i>
+          </a>
+          <!-- Google +-->
+          <a class="gplus-ic">
+            <i class="fab fa-google-plus-g white-text mr-4"> </i>
+          </a>
+          <!--Linkedin -->
+          <a class="li-ic">
+            <i class="fab fa-linkedin-in white-text mr-4"> </i>
+          </a>
+          <!--Instagram-->
+          <a class="ins-ic">
+            <i class="fab fa-instagram white-text"> </i>
+          </a>
+
         </div>
-        <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center text-white">
-                <p class="h6"><a class="text-green ml-2" href="https://www.viccoshop.com.tr" target="_blank"><strong>Vicco</strong></a><font color="#000000">© 2019 Tüm Hakları Saklıdır.</font></p><font color="#000000">
-            </div>
-        </div>
+        <!-- Grid column -->
+
+      </div>
+      <!-- Grid row-->
+
     </div>
-</section>
+  </div>
 
+  <!-- Footer Links -->
+  <div class="container text-center text-md-left mt-5">
+
+    <!-- Grid row -->
+    <div class="row mt-3 dark-grey-text">
+
+      <!-- Grid column -->
+      <div class="col-md-3 col-lg-4 col-xl-3 mb-4">
+
+        <!-- Content -->
+        <h6 class="text-uppercase font-weight-bold">Sản phẩm</h6>
+        <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+        <p>Sản phẩm của một nhóm sinh viên IT</p>
+
+      </div>
+      <!-- Grid column -->
+
+      <!-- Grid column -->
+      <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+
+        <!-- Links -->
+        <h6 class="text-uppercase font-weight-bold">LOVE MUSIC</h6>
+        <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+        <p>
+          <a class="dark-grey-text" href="#!">Nghe nhạc </a>
+        </p>
+        <p>
+          <a class="dark-grey-text" href="#!">Tải xuống bài hát</a>
+        </p>
+        <p>
+          <a class="dark-grey-text" href="#!">Cộng đồng mạng xã hội</a>
+        </p>
+
+      </div>
+      <!-- Grid column -->
+
+      <!-- Grid column -->
+      <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+
+        <!-- Links -->
+        <h6 class="text-uppercase font-weight-bold">Liên kết</h6>
+        <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+        <p>
+          <a class="dark-grey-text" href="#!">Bài hát mới</a>
+        </p>
+        <p>
+          <a class="dark-grey-text" href="#!">Bài hát yêu thích</a>
+        </p>
+
+      </div>
+      <!-- Grid column -->
+
+      <!-- Grid column -->
+      <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+
+        <!-- Links -->
+        <h6 class="text-uppercase font-weight-bold">liên hệ với chúng tôi?</h6>
+        <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+        <p>
+          <i class="fas fa-home mr-3"></i> New York, NY 10012, US</p>
+        <p>
+          <i class="fas fa-envelope mr-3"></i> info@example.com</p>
+        <p>
+          <i class="fas fa-phone mr-3"></i> + 01 234 567 88</p>
+        <p>
+          <i class="fas fa-print mr-3"></i> + 01 234 567 89</p>
+
+      </div>
+      <!-- Grid column -->
+
+    </div>
+    <!-- Grid row -->
+
+  </div>
+  <!-- Footer Links -->
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center text-black-50 py-3">© 2018 Copyright:
+    <a class="dark-grey-text" href="https://mdbootstrap.com/education/bootstrap/"> MDBootstrap.com</a>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->

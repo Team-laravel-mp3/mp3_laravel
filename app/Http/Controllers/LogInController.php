@@ -6,11 +6,20 @@ use Illuminate\Http\Request;
 use App\User;
 
 use Carbon\Carbon;
+//check
+use Illuminate\Support\Facades\Hash;
+
+use Illuminate\Support\Facades\Auth;
+
+//mail
+use Illuminate\Support\Facades\Mail;
+
+//fb
+use App\Services\SocialAccountService;
 use Illuminate\Support\Facades\Log;
 use Laravel\Socialite\Facades\Socialite;
-use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Mail;
+
+use function GuzzleHttp\Promise\all;
 
 class LogInController extends Controller
 {
@@ -33,9 +42,9 @@ class LogInController extends Controller
          ];
         if (Auth::attempt($data)) {
                 return redirect('home');
-            
+
         } else {
-            return redirect('login')->with('thongbao', 'Đăng nhập không thành công');
+            return redirect('home')->with('thongbao', 'Đăng nhập không thành công');
         }
     }
     public function getregister(){
@@ -70,7 +79,7 @@ class LogInController extends Controller
         Mail::send('mails.welcome', array('name'=>$request->name,'email'=>$request->email) ,function($message){
                 $message->to($this->email, 'Visitor')->subject('Chào mừng thành viên mới');
 	    });
-        return redirect('login')->with('thongbao','Thêm thành công');
+        return redirect('home')->with('thongbao','Đăng kí thành công , bạn có thể tham gia cùng với chúng tôi!');
 
     }
     public function DeleteUser($id){
@@ -170,5 +179,33 @@ class LogInController extends Controller
         $checkUser->save();
         return redirect('login');
     }
+
+    // đăng nhập bằng facebook bị hủy bỏ vì ko dùng được đường link http thay vào đó fb bắt dùng https.
+    // public function redirect($social)
+    // {
+    //     return Socialite::driver($social)->redirect();
+    // }
+
+    // public function callback($social)
+    // {
+    //     $user = Socialite::driver($social)->user();
+    //     $authUser = $this->findOrCreateUser($user);
+    //     Auth::login($authUser);
+    //     return redirect()->to('/home');
+    // }
+    // private function findOrCreateUser($user){
+    //     $authUser = User::where('provider_id', $user->id)->first();
+    //     if($authUser){
+    //         return $authUser;
+    //     }
+    //     return User::create([
+    //         'name' => $user->name,
+    //         'password' => $user->token,
+    //         'email' => $user->email,
+    //         'provider_id' => $user->id,
+    //         'provider' => $user->id,
+    //     ]);
+    // }
+
 }
 

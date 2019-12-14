@@ -60,8 +60,11 @@ class baihathot extends Seeder
     public function run()
     {
         DB::table('baihathot')->insert([
-            ['tenbaihathot'=>'HOT ABC','loibaihat'=>'cái quần què','file'=>'không có','image'=>'cũng đéo có','idtheloai'=>'1'],
-            ['tenbaihathot'=>'hot abc','loibaihat'=>'cái áo què','file'=>'không có','image'=>'cũng đéo có','idtheloai'=>'1']
+            ['tenbaihathot'=>'Bước qua đời nhau','loibaihat'=>'ko có','file'=>'Buoc-Qua-Doi-Nhau-Le-Bao-Binh.mp3','image'=>'buoc-qua-doi-nhau.jpg','idtheloai'=>'1'],
+            ['tenbaihathot'=>'Dừng lại ở đây thôi','loibaihat'=>'ko có','file'=>'Dung-Lai-Day-Thoi-Hoa-Vinh.mp3','image'=>'dung-lai.jpg','idtheloai'=>'1'],
+            ['tenbaihathot'=>'Là bạn không thể yêu','loibaihat'=>'ko có','file'=>'Dung-Lai-Day-Thoi-Hoa-Vinh.mp3','image'=>'la-ban-ko-the.jpg','idtheloai'=>'1'],
+            ['tenbaihathot'=>'Người thứ 3','loibaihat'=>'ko có','file'=>'Nguoi-Thu-3.mp3','image'=>'nguoi-thu-3.jpg','idtheloai'=>'1'],
+            ['tenbaihathot'=>'Chiều hôm ấy','loibaihat'=>'ko có','file'=>'Chieu-Hom-Ay-JayKii.mp3','image'=>'chieu-hom-ay.jpg','idtheloai'=>'1']
         ]);
     }
 }
@@ -70,8 +73,11 @@ class baihatmoi extends Seeder
     public function run()
     {
         DB::table('baihatmoi')->insert([
-            ['tenbaihat'=>'ABC','loibaihat'=>'sdlkjaskldjklasjdljaslkjda','file'=>'không có','image'=>'cũng đéo có','iduser'=>'1','idtheloai'=>'1','status'=>'1'],
-            ['tenbaihat'=>'abc','loibaihat'=>'jkasdlaskldjaslkjdlkasjldk','file'=>'không có','image'=>'cũng đéo có','iduser'=>'1','idtheloai'=>'1','status'=>'1']
+            ['tenbaihat'=>'Bước qua đời nhau','loibaihat'=>'ko có','file'=>'Buoc-Qua-Doi-Nhau-Le-Bao-Binh.mp3','image'=>'buoc-qua-doi-nhau.jpg','idtheloai'=>'1', 'view'=>'0', 'iduser'=>'1', 'status'=>'1'],
+            ['tenbaihat'=>'Dừng lại ở đây thôi','loibaihat'=>'ko có','file'=>'Dung-Lai-Day-Thoi-Hoa-Vinh.mp3','image'=>'dung-lai.jpg','idtheloai'=>'1', 'view'=>'0', 'iduser'=>'1', 'status'=>'1'],
+            ['tenbaihat'=>'Là bạn không thể yêu','loibaihat'=>'ko có','file'=>'Dung-Lai-Day-Thoi-Hoa-Vinh.mp3','image'=>'la-ban-ko-the.jpg','idtheloai'=>'1', 'view'=>'0', 'iduser'=>'1', 'status'=>'1'],
+            ['tenbaihat'=>'Người thứ 3','loibaihat'=>'ko có','file'=>'Nguoi-Thu-3.mp3','image'=>'nguoi-thu-3.jpg','idtheloai'=>'1', 'view'=>'0', 'iduser'=>'1', 'status'=>'1'],
+            ['tenbaihat'=>'Chiều hôm ấy','loibaihat'=>'ko có','file'=>'Chieu-Hom-Ay-JayKii.mp3','image'=>'chieu-hom-ay.jpg','idtheloai'=>'1', 'view'=>'0', 'iduser'=>'1', 'status'=>'1']
         ]);
     }
 }
@@ -103,9 +109,9 @@ class users extends Seeder
     {
         DB::table('users')->insert([
             'name'=>'Thang',
-            'avatar'=>'default_avata.jpg',
             'email'=>'thang@12345',
-            'password'=>bcrypt('123456')
+            'password'=>bcrypt('123456'),
+            'avatar'=>'default_avata.jpg'
         ]);
     }
 }

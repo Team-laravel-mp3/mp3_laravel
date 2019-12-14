@@ -1,94 +1,136 @@
 @extends('pages.master.layout')
 @section('content')
-    <div class="container">
-        <hr style="margin-top: 2%;margin-bottom: 2%;width: 70%;">
-        <div class="row">
-            <div class="col-md-8">
-                {{-- slider --}}
-                <div   class="carousel slide" data-ride="carousel">
-                  <div id="slider" class="carousel-inner">
-                    <div class="carousel-item active">
-                      <img src="https://www.dulichvietnam.com.vn/cam-nang-nhat-ban/images/bien-hoa-cv-hitachi.jpg" alt="" />
-                    </div>
-                    <div class="carousel-item">
-                      <img src="http://www.phunungaynay.vn/wp-content/uploads/2016/05/canh-dep-vuon-hoa-nhat-ban-1.jpg" alt="" title="Ironman Screenshot" />
+@if(count($errors)>0)
+    <div class="alert alert-danger">
+    @foreach ($errors->all() as $err)
+    {{ $err }}<br>
+    @endforeach
+    </div>
+@endif
+@if(session('thongbao'))
+    <div class="alert alert-danger">
+    {{ session('thongbao') }}
+    </div>
+@endif
+<hr style="margin-top: 2%;margin-bottom: 2%;width: 70%;">
 
-                    </div>
-                    <div class="carousel-item">
-                      <a href=""><img src="https://innotour.vn/wp-content/uploads/2017/11/phong-canh-dep-5-814x518.jpg" alt="" /></a>
-                    </div>
-                  </div>
-                </div>
-                
-                {{-- slider --}}
+<div id="carousel-example-2" class="carousel slide carousel-fade" data-ride="carousel">
+    <!--Indicators-->
+    <ol class="carousel-indicators">
+    <li data-target="#carousel-example-2" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example-2" data-slide-to="1"></li>
+    <li data-target="#carousel-example-2" data-slide-to="2"></li>
+    </ol>
+    <!--/.Indicators-->
+    <!--Slides-->
+    <div class="carousel-inner" role="listbox">
+        <div class="carousel-item active">
+            <div class="view">
+                <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(68).jpg"alt="First slide">
+            <div class="mask rgba-black-light"></div>
             </div>
-            <div class="col-md-4">
-                    <div class="mySlides">
-                          <div class="numbertext"></div>
-                              <img src="https://avatar-nct.nixcdn.com/singer/avatar/2017/04/05/6/c/a/1/1491357370894_600.jpg" style="width:100%;height: 290px;">
-                          </div>
-                        
-                          <div class="mySlides">
-                            <div class="numbertext"></div>
-                              <img src="https://avatar-nct.nixcdn.com/singer/avatar/2019/03/21/0/e/3/d/1553153837657_600.jpg" style="width:100%;height: 290px;">
-                          </div>
-                        
-                          <div class="mySlides">
-                            <div class="numbertext"></div>
-                              <img src="https://avatar-nct.nixcdn.com/singer/avatar/2019/09/26/1/d/b/5/1569474237302_600.jpg" style="width:100%;height: 290px;">
-                          </div>
-                        
-                          <div class="mySlides">
-                            <div class="numbertext"></div>
-                              <img src="https://avatar-nct.nixcdn.com/singer/avatar/2018/05/07/7/c/e/5/1525673879571_600.jpg" style="width:100%;height: 290px;">
-                          </div>
-                        
-                          <div class="mySlides">
-                            <div class="numbertext"></div>
-                              <img src="https://avatar-nct.nixcdn.com/singer/avatar/2019/08/30/d/5/9/d/1567133656446_600.jpg" style="width:100%;height: 290px;">
-                          </div>
-                          <!-- Next and previous buttons -->
-                        
-                          <!-- Image text -->
-                          <div class="caption-container">
-                            <p id="caption"></p>
-                          </div>
-                          <!-- Thumbnail images -->
-                          <div class="row">
-                            <div class="column">
-                              <img class="demo cursor" src="https://avatar-nct.nixcdn.com/singer/avatar/2017/04/05/6/c/a/1/1491357370894_600.jpg" style="width:100%" onclick="currentSlide(1)" alt="The Woods">
-                            </div>
-                            <div class="column">
-                              <img class="demo cursor" src="https://avatar-nct.nixcdn.com/singer/avatar/2019/03/21/0/e/3/d/1553153837657_600.jpg" style="width:100%" onclick="currentSlide(2)" alt="Cinque Terre">
-                            </div>
-                            <div class="column">
-                              <img class="demo cursor" src="https://avatar-nct.nixcdn.com/singer/avatar/2019/09/26/1/d/b/5/1569474237302_600.jpg" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
-                            </div>
-                            <div class="column">
-                              <img class="demo cursor" src="https://avatar-nct.nixcdn.com/singer/avatar/2018/05/07/7/c/e/5/1525673879571_600.jpg" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
-                            </div>
-                            <div class="column">
-                              <img class="demo cursor" src="https://avatar-nct.nixcdn.com/singer/avatar/2019/08/30/d/5/9/d/1567133656446_600.jpg" style="width:100%" onclick="currentSlide(5)" alt="Nature and sunrise">
-                            </div>
-                          </div>
+            <div class="carousel-caption">
+                <h3 class="h3-responsive">Light mask</h3>
+                <p>First text</p>
             </div>
         </div>
-        <div class="allslide">
-            <h5>Bài hát mới</h5>
-            <div class="owl-carousel owl-theme">
-                    <div class="item"><h4>1</h4></div>
-                    <div class="item"><h4>2</h4></div>
-                    <div class="item"><h4>3</h4></div>
-                    <div class="item"><h4>4</h4></div>
-                    <div class="item"><h4>5</h4></div>
-                    <div class="item"><h4>6</h4></div>
-                    <div class="item"><h4>7</h4></div>
-                    <div class="item"><h4>8</h4></div>
-                    <div class="item"><h4>9</h4></div>
-                    <div class="item"><h4>10</h4></div>
-                    <div class="item"><h4>11</h4></div>
-                    <div class="item"><h4>12</h4></div>
-                </div>
+        <div class="carousel-item">
+            <!--Mask color-->
+            <div class="view">
+                <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(6).jpg"alt="Second slide">
+            <div class="mask rgba-black-strong"></div>
+            </div>
+            <div class="carousel-caption">
+                <h3 class="h3-responsive">Strong mask</h3>
+                <p>Secondary text</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <!--Mask color-->
+            <div class="view">
+                <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(9).jpg"alt="Third slide">
+            <div class="mask rgba-black-slight"></div>
+            </div>
+            <div class="carousel-caption">
+                <h3 class="h3-responsive">Slight mask</h3>
+                <p>Third text</p>
+            </div>
         </div>
     </div>
+    <!--/.Slides-->
+    <!--Controls-->
+    <a class="carousel-control-prev" href="#carousel-example-2" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carousel-example-2" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+    <!--/.Controls-->
+</div>
+<!--/.Carousel Wrapper-->
+
+<div id="carousel-example-multi" class="carousel slide carousel-multi-item v-2" data-ride="carousel">
+    <div class="col-md-12">
+        <h4>Bài hát mới</h4>
+    </div>
+    <!--Controls-->
+    <div class="controls-top">
+    <a class="btn-floating" href="#carousel-example-multi" data-slide="prev"><i
+        class="fas fa-chevron-left"></i></a>
+    <a class="btn-floating" href="#carousel-example-multi" data-slide="next"><i
+        class="fas fa-chevron-right"></i></a>
+    </div>
+    <!--/.Controls-->
+
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+    <li data-target="#carousel-example-multi" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example-multi" data-slide-to="1"></li>
+    <li data-target="#carousel-example-multi" data-slide-to="2"></li>
+    </ol>
+    <!--/.Indicators-->
+
+    <div class="carousel-inner v-2" role="listbox">
+    <div class="carousel-item active">
+        <div class="row">
+            @foreach ($baihatmoi as $bhm)
+                <div class="col-12 col-md-4">
+                    <a href="{{ URL ::to('user/profile/play-music/'.$bhm->id) }}" style="color: #74b9ff">
+                        <div class="card mb-2">
+                            <div class="view overlay">
+                                <img class="card-img-top" src="{{ asset('images/images_baihatmoi/'.$bhm->image )}}"alt="Card image cap" width="300px" height="250px" >
+                                <div class="mask flex-center rgba-green-slight">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title font-weight-bold" style="color: #2c3e50">{{ $bhm->tenbaihat }}</h5>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            @endforeach
+        </div>
+    </div>
+    </div>
+</div>
+<script>
+        $('.carousel.carousel-multi-item.v-2 .carousel-item').each(function(){
+            var next = $(this).next();
+            if (!next.length) {
+              next = $(this).siblings(':first');
+            }
+            next.children(':first-child').clone().appendTo($(this));
+
+            for (var i=0;i<4;i++) {
+              next=next.next();
+              if (!next.length) {
+                next=$(this).siblings(':first');
+              }
+              next.children(':first-child').clone().appendTo($(this));
+            }
+          });
+</script>
 @endsection

@@ -2,14 +2,14 @@
 @section('title','Login')
 @section('content')
 @if(count($errors)>0)
-<div class="alert alert-primary">
+<div class="alert alert-danger">
     @foreach ($errors->all() as $err)
         {{ $err }}<br>
     @endforeach
 </div>
 @endif
 @if(session('thongbao'))
-    <div class="alert alert-primary">
+    <div class="alert alert-danger">
         {{ session('thongbao') }}
     </div>
 @endif
@@ -44,7 +44,7 @@
                         </div>
                     </div>
                     <button type="submit" class="btn btn-primary">Đăng nhập</button>
-                    {{--  <a href="{{ route('User.Login.facebook') }}" >ddn fb</a>  --}}
+                    {{-- <a href="redirect/facebook" class="btn btn-primary">Facebook Login</a> --}}
                     <a href="{{ route('forget.password') }}" class="card-link">Quên mật khẩu</a><br><br>
                 </div>
                 <div class="col-md-4">

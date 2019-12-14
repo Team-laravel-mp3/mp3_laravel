@@ -22,11 +22,11 @@ class CheckLogin
                 return $next($request);
             }
             else{
-                return redirect('login');
+                return redirect('home');
             }
         }
         else{
-            return redirect('login');
+            return redirect('home')->with('thongbao', 'Bạn chưa đăng nhập không thể dùng chức năng này !');
 
         }
     }

@@ -13,8 +13,8 @@
                         <input type="text" class="form-control" readonly>
                         <div class="input-group-btn">
                             <span class="fileUpload btn btn-success">
-                                <span class="upl" id="upload">Upload single file</span>
-                                <input type="file" name="mp3" class="upload up" id="up" accept=".mp3,audio/*"/>
+                                <span class="upl" id="upload">Tải lên file âm thanh</span>
+                                <input type="file" name="mp3" class="upload up " id="up" accept=".mp3,audio/*"/>
                             </span>
                         </div>
                     </div>
